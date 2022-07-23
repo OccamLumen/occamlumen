@@ -2,7 +2,7 @@ name: 'occam lumen'
 on: 
   push:
     branches:
-      - occamlumen
+      - '*'
 
 jobs:
   build:
