@@ -1,8 +1,6 @@
 using Client.Config;
 using Microsoft.AspNetCore.Components;
-using Client.DTO;
 using System.Threading.Tasks;
-using Client.Services;
 using System;
 
 namespace Client.Pages
@@ -10,8 +8,6 @@ namespace Client.Pages
   public partial class Index
     {
         [Inject]
-        private WeatherForecastService _weatherForecastService { get; set; }
-        private WeatherForecast _weatherGuess { get; set; }
         public bool IsLoading { get; set; }
         public const bool IsDebug =
             #if DEBUG
@@ -30,19 +26,7 @@ namespace Client.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            IsLoading = true;
-            try
-            {
-                _weatherGuess = await _weatherForecastService.GetAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Unable to retrieve weather guess:{ex.GetType()}:{ex.Message}:{ex.StackTrace}");
-            }
-            finally
-            {
-                IsLoading = false;
-            }
+            IsLoading = false;
         }
     }
 }
