@@ -7,7 +7,7 @@ namespace Client.Pages
 {
   public partial class Index
     {
-        public bool IsLoading { get; set; }
+        public bool IsLoading = { get; set; }
         public const bool IsDebug =
             #if DEBUG
             true
@@ -21,11 +21,6 @@ namespace Client.Pages
             {
                 AppState.Reset();
             }
-        }
-
-        protected override async Task OnInitializedAsync()
-        {
-            IsLoading = false;
         }
     }
 }
