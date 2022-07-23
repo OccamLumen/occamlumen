@@ -7,7 +7,6 @@ namespace Client.Pages
 {
   public partial class Index
     {
-        [Inject]
         public bool IsLoading { get; set; }
         public const bool IsDebug =
             #if DEBUG
