@@ -32,4 +32,4 @@ jobs:
             keep_files: false
             force_orphan: true
             # Custom Domain
-            cname: occamlu.men
+            cname: www.occamlu.men
