@@ -5,7 +5,7 @@ using System;
 
 namespace Client.Pages
 {
-  public partial class Index
+    public partial class Index
     {
         public bool IsLoading { get; set; }
         public const bool IsDebug =
